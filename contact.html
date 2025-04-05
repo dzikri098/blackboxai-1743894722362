@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Greenfield Academy</title>
+    <!-- Production-ready Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                            700: '#6d28d9'
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                        sm: '4px',
+                        md: '8px',
+                        lg: '12px',
+                        xl: '20px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏫</text></svg>">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation with Glassmorphism -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary-600 flex items-center">
+                    <i class="fas fa-school mr-2"></i> Greenfield Academy
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium">Home</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-primary-600 font-medium">About</a></li>
+                    <li><a href="academics.html" class="text-gray-700 hover:text-primary-600 font-medium">Academics</a></li>
+                    <li><a href="faculty.html" class="text-gray-700 hover:text-primary-600 font-medium">Faculty</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium">Contact</a></li>
+                </ul>
+                <a href="admissions.html" class="bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition font-medium">Apply Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="relative h-96">
+        <img src="https://images.pexels.com/photos/4145357/pexels-photo-4145357.jpeg" 
+             alt="School campus" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-6">
+            <div class="max-w-4xl backdrop-blur-sm bg-white/10 p-10 rounded-2xl border border-white/20">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Contact Our School</h1>
+                <p class="text-xl text-white/90">We're here to answer your questions and welcome your visit</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Banner -->
+    <section class="bg-primary-600 text-white py-4 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-lg mb-2 md:mb-0 font-medium"><i class="fas fa-question-circle mr-2"></i> Need immediate assistance?</p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <a href="tel:5551234567" class="flex items-center hover:text-gray-200">
+                    <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567
+                </a>
+                <a href="mailto:info@greenfield.edu" class="flex items-center hover:text-gray-200">
+                    <i class="fas fa-envelope mr-2"></i> info@greenfield.edu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Sections -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Send Us a Message</h2>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700">First name</label>
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary-500 focus:border-primary-500">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700">Last name</label>
+                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary-500 focus:border-primary-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                            <input type="email" name="email" id="email" autocomplete="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary-500 focus:border-primary-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone number</label>
+                            <input type="text" name="phone" id="phone" autocomplete="tel" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary-500 focus:border-primary-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <select id="subject" name="subject" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md">
+                                <option>General Inquiry</option>
+                                <option>Admissions</option>
+                                <option>Academic Programs</option>
+                                <option>School Tour</option>
+                                <option>Employment</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-primary-500 focus:border-primary-500"></textarea>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="newsletter" name="newsletter" type="checkbox" class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                            <label for="newsletter" class="ml-2 block text-sm text-gray-700">
+                                Subscribe to our newsletter
+                            </label>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Contact Information</h2>
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full">
+                                <i class="fas fa-map-marker-alt text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Location</h3>
+                                <p class="mt-1 text-gray-600">123 Education Avenue<br>Greenfield, CA 90210</p>
+                                <a href="#" class="mt-2 inline-flex items-center text-primary-600 hover:text-primary-700">
+                                    <i class="fas fa-directions mr-2"></i> Get Directions
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full">
+                                <i class="fas fa-clock text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Office Hours</h3>
+                                <p class="mt-1 text-gray-600">
+                                    <span class="font-medium">Monday-Friday:</span> 8:00 AM - 5:00 PM<br>
+                                    <span class="font-medium">Saturday:</span> 9:00 AM - 12:00 PM<br>
+                                    <span class="font-medium">Sunday:</span> Closed
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full">
+                                <i class="fas fa-phone-alt text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Phone Numbers</h3>
+                                <ul class="mt-1 space-y-1 text-gray-600">
+                                    <li><span class="font-medium">Main Office:</span> (555) 123-4567</li>
+                                    <li><span class="font-medium">Admissions:</span> (555) 123-4568</li>
+                                    <li><span class="font-medium">Attendance:</span> (555) 123-4569</li>
+                                    <li><span class="font-medium">Fax:</span> (555) 123-4570</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full">
+                                <i class="fas fa-envelope text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email Addresses</h3>
+                                <ul class="mt-1 space-y-1 text-gray-600">
+                                    <li><span class="font-medium">General:</span> info@greenfield.edu</li>
+                                    <li><span class="font-medium">Admissions:</span> admissions@greenfield.edu</li>
+                                    <li><span class="font-medium">HR:</span> hr@greenfield.edu</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="mt-8">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.102370303134!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjYiTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="w-full h-full"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Contacts -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Key Contacts</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Connect with the right person for your inquiry</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Admissions -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-user-graduate text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Admissions Office</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">For questions about the application process, school tours, and enrollment.</p>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Jennifer Adams, Director</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>(555) 123-4568</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>admissions@greenfield.edu</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Academics -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-book-open text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Academic Office</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">For curriculum questions, academic programs, and student support services.</p>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Michael Chen, Academic Dean</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>(555) 123-4571</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>academics@greenfield.edu</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Student Life -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-users text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Student Life</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">For extracurricular activities, athletics, and student wellbeing.</p>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Maria Rodriguez, Dean</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>(555) 123-4572</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>studentlife@greenfield.edu</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Development -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-hand-holding-heart text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Development Office</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">For alumni relations, donations, and fundraising events.</p>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Robert Wilson, Director</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>(555) 123-4573</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>development@greenfield.edu</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Business Office -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-calculator text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Business Office</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">For tuition, billing, and financial aid questions.</p>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>Lisa Park, CFO</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>(555) 123-4574</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>business@greenfield.edu</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Human Resources -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-briefcase text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Human Resources</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">For employment opportunities and faculty/staff inquiries.</p>
+                    <div class="space-y-2">
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-user mr-2"></i>
+                            <span>David Kim, Director</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>(555) 123-4575</span>
+                        </p>
+                        <p class="flex items-center text-gray-700">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>hr@greenfield.edu</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Campus -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Visit Our Campus</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Experience Greenfield Academy firsthand</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Campus Tours</h3>
+                    <p class="text-gray-600 mb-6">We welcome prospective families to tour our beautiful 25-acre campus and see our facilities in action. Tours are available Monday through Friday during school hours and select Saturdays.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-calendar-check text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Schedule a Tour</h4>
+                                <p class="text-gray-600">Personalized tours with an admissions representative.</p>
+                                <a href="#" class="mt-2 inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+                                    <i class="fas fa-calendar-plus mr-2"></i> Book a Tour
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-users text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Open Houses</h4>
+                                <p class="text-gray-600">Join us for our next open house event on October 15th.</p>
+                                <a href="#" class="mt-2 inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+                                    <i class="fas fa-info-circle mr-2"></i> Learn More
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-video text-primary-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">Virtual Tour</h4>
+                                <p class="text-gray-600">Can't visit in person? Take our 360° virtual tour.</p>
+                                <a href="#" class="mt-2 inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+                                    <i class="fas fa-play mr-2"></i> Start Virtual Tour
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Directions & Parking</h3>
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full">
+                                <i class="fas fa-car text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900 mb-2">By Car</h4>
+                                <p class="text-gray-600">From downtown, take Highway 101 North to exit 45B. Turn right on Education Avenue. Campus is 0.5 miles on the left.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full">
+                                <i class="fas fa-bus text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900 mb-2">Public Transit</h4>
+                                <p class="text-gray-600">Take Metro Line 4 to the Education Avenue stop. Walk 3 blocks north to campus.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 p-3 rounded-full">
+                                <i class="fas fa-parking text-primary-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-gray-900 mb-2">Visitor Parking</h4>
+                                <p class="text-gray-600">Free visitor parking is available in Lot A near the main entrance. Check in at the security kiosk for a parking pass.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4 flex items-center">
+                    <i class="fas fa-school mr-2"></i> Greenfield Academy
+                </h3>
+                <p class="text-gray-300">Preparing students for success in a changing world.</p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="academics.html" class="text-gray-300 hover:text-white">Academics</a></li>
+                    <li><a href="faculty.html" class="text-gray-300 hover:text-white">Faculty</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                <address class="not-italic text-gray-300 space-y-2">
+                    <p class="flex items-start">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i> 
+                        <span>123 Education Avenue<br>Greenfield, CA 90210</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> info@greenfield.edu
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i> Mon-Fri: 8AM - 5PM
+                    </p>
+                </address>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Subscribe to our newsletter for updates and announcements.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-800">
+                    <button type="submit" class="bg-primary-600 text-white px-4 py-2 rounded-r hover:bg-primary-700 transition">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+            <p>&copy; 2023 Greenfield Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 bg-white/95 z-50 p-6">
+        <div class="flex justify-between items-center mb-8">
+            <a href="index.html" class="text-2xl font-bold text-primary-600">Greenfield Academy</a>
+            <button class="mobile-menu-close text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <ul class="space-y-6">
+            <li><a href="index.html" class="block text-xl text-gray-700 hover:text-primary-600">Home</a></li>
+            <li><a href="about.html" class="block text-xl text-gray-700 hover:text-primary-600">About</a></li>
+            <li><a href="academics.html" class="block text-xl text-gray-700 hover:text-primary-600">Academics</a></li>
+            <li><a href="faculty.html" class="block text-xl text-gray-700 hover:text-primary-600">Faculty</a></li>
+            <li><a href="contact.html" class="block text-xl text-gray-700 hover:text-primary-600">Contact</a></li>
+        </ul>
+        <div class="mt-8">
+            <a href="admissions.html" class="block w-full bg-primary-600 text-white text-center py-3 rounded-full hover:bg-primary-700 transition">Apply Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('hidden');
+        });
+
+        document.querySelector('.mobile-menu-close').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

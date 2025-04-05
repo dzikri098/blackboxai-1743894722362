@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Greenfield Academy</title>
+    <!-- Production-ready Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                            700: '#6d28d9'
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                        sm: '4px',
+                        md: '8px',
+                        lg: '12px',
+                        xl: '20px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏫</text></svg>">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation with Glassmorphism -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary-600 flex items-center">
+                    <i class="fas fa-school mr-2"></i> Greenfield Academy
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium">Home</a></li>
+                    <li class="relative group">
+                        <a href="about.html" class="text-gray-700 hover:text-primary-600 font-medium">About</a>
+                        <div class="absolute hidden group-hover:block bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 w-48 mt-1">
+                            <a href="#history" class="block px-4 py-2 hover:bg-primary-50 rounded">History</a>
+                            <a href="#mission" class="block px-4 py-2 hover:bg-primary-50 rounded">Mission</a>
+                            <a href="#leadership" class="block px-4 py-2 hover:bg-primary-50 rounded">Leadership</a>
+                        </div>
+                    </li>
+                    <li><a href="academics.html" class="text-gray-700 hover:text-primary-600 font-medium">Academics</a></li>
+                    <li><a href="faculty.html" class="text-gray-700 hover:text-primary-600 font-medium">Faculty</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium">Contact</a></li>
+                </ul>
+                <a href="admissions.html" class="bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition font-medium">Apply Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="relative h-96">
+        <img src="https://images.pexels.com/photos/159740/library-la-trobe-study-students-159740.jpeg" 
+             alt="School library" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-6">
+            <div class="max-w-4xl backdrop-blur-sm bg-white/10 p-10 rounded-2xl border border-white/20">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">About Our School</h1>
+                <p class="text-xl text-white/90">Discover our rich history, educational philosophy, and dedicated leadership</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Banner -->
+    <section class="bg-primary-600 text-white py-4 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-lg mb-2 md:mb-0 font-medium"><i class="fas fa-question-circle mr-2"></i> Have questions about our school?</p>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <a href="tel:5551234567" class="flex items-center hover:text-gray-200">
+                    <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567
+                </a>
+                <a href="mailto:info@greenfield.edu" class="flex items-center hover:text-gray-200">
+                    <i class="fas fa-envelope mr-2"></i> info@greenfield.edu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Our History</h2>
+                    <div class="prose prose-lg text-gray-600">
+                        <p>Founded in 1995 by visionary educators, Greenfield Academy began as a small independent school with just 47 students in a converted farmhouse. Our founders believed in creating an educational environment that nurtured both intellectual curiosity and personal growth.</p>
+                        <p class="mt-4">Over the past 25+ years, we've grown into a thriving institution serving over 800 students from preschool through 12th grade, while maintaining our commitment to individualized learning and community values.</p>
+                        <p class="mt-4">In 2010, we moved to our current 25-acre campus featuring state-of-the-art facilities, and in 2020 we were recognized as a National Blue Ribbon School for academic excellence.</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg" 
+                         alt="Old school building" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg backdrop-blur-sm bg-white/80">
+                        <p class="text-sm font-medium text-gray-700">Our original campus (1995-2010)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Our Mission & Vision</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Guiding principles that shape our educational approach</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Mission Card -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 backdrop-blur-sm bg-white/80">
+                    <div class="flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-6 mx-auto">
+                        <i class="fas fa-bullseye text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 text-center">To empower students to become critical thinkers, compassionate leaders, and engaged global citizens through innovative, student-centered education in a nurturing community.</p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition duration-300 backdrop-blur-sm bg-white/80">
+                    <div class="flex items-center justify-center w-16 h-16 bg-secondary-100 rounded-full mb-6 mx-auto">
+                        <i class="fas fa-eye text-secondary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-600 text-center">To be recognized as a leader in transformative education that prepares students to thrive in an evolving world while making meaningful contributions to society.</p>
+                </div>
+            </div>
+
+            <!-- Core Values -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-center text-gray-900 mb-8">Our Core Values</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Curiosity</h4>
+                        <p class="text-gray-600 text-sm">Fostering lifelong love of learning</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-hands-helping text-green-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Community</h4>
+                        <p class="text-gray-600 text-sm">Building strong, supportive relationships</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user-shield text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Integrity</h4>
+                        <p class="text-gray-600 text-sm">Acting with honesty and responsibility</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center">
+                                <i class="fas fa-globe-americas text-yellow-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Global Mindset</h4>
+                        <p class="text-gray-600 text-sm">Embracing diversity and global awareness</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Our Leadership</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Meet the dedicated professionals guiding our school</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Head of School -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3760373/pexels-photo-3760373.jpeg" 
+                             alt="Dr. Sarah Johnson" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Dr. Sarah Johnson</h3>
+                        <p class="text-primary-600 font-medium mb-4">Head of School</p>
+                        <p class="text-gray-600 mb-4">With 20+ years in education, Dr. Johnson leads our school with a vision for innovative, student-centered learning.</p>
+                        <a href="mailto:sjohnson@greenfield.edu" class="text-sm text-primary-600 hover:text-primary-700 font-medium flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Email Dr. Johnson
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Academic Dean -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3760375/pexels-photo-3760375.jpeg" 
+                             alt="Michael Chen" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Michael Chen</h3>
+                        <p class="text-primary-600 font-medium mb-4">Academic Dean</p>
+                        <p class="text-gray-600 mb-4">Oversees curriculum development and ensures academic excellence across all grade levels.</p>
+                        <a href="mailto:mchen@greenfield.edu" class="text-sm text-primary-600 hover:text-primary-700 font-medium flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Email Mr. Chen
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dean of Students -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3760374/pexels-photo-3760374.jpeg" 
+                             alt="Maria Rodriguez" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Maria Rodriguez</h3>
+                        <p class="text-primary-600 font-medium mb-4">Dean of Students</p>
+                        <p class="text-gray-600 mb-4">Focuses on student wellbeing, community building, and extracurricular programming.</p>
+                        <a href="mailto:mrodriguez@greenfield.edu" class="text-sm text-primary-600 hover:text-primary-700 font-medium flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Email Ms. Rodriguez
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Board of Trustees -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-center text-gray-900 mb-8">Board of Trustees</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3760376/pexels-photo-3760376.jpeg" 
+                                 alt="James Wilson" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium text-gray-900">James Wilson</h4>
+                        <p class="text-sm text-gray-600">Chair</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3760377/pexels-photo-3760377.jpeg" 
+                                 alt="Lisa Park" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium text-gray-900">Lisa Park</h4>
+                        <p class="text-sm text-gray-600">Vice Chair</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3760378/pexels-photo-3760378.jpeg" 
+                                 alt="Robert Kim" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium text-gray-900">Robert Kim</h4>
+                        <p class="text-sm text-gray-600">Treasurer</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3760379/pexels-photo-3760379.jpeg" 
+                                 alt="Aisha Johnson" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium text-gray-900">Aisha Johnson</h4>
+                        <p class="text-sm text-gray-600">Secretary</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3760380/pexels-photo-3760380.jpeg" 
+                                 alt="David Miller" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium text-gray-900">David Miller</h4>
+                        <p class="text-sm text-gray-600">Member</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3760381/pexels-photo-3760381.jpeg" 
+                                 alt="Sophia Chen" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-medium text-gray-900">Sophia Chen</h4>
+                        <p class="text-sm text-gray-600">Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-primary-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold mb-6">Want to Learn More?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Schedule a personal tour to experience our campus and community firsthand.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-white text-primary-600 px-8 py-3 rounded-full hover:bg-gray-100 transition font-medium shadow-lg">Schedule a Tour</a>
+                <a href="admissions.html" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition font-medium shadow-lg">Admissions Info</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4 flex items-center">
+                    <i class="fas fa-school mr-2"></i> Greenfield Academy
+                </h3>
+                <p class="text-gray-300">Preparing students for success in a changing world.</p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="academics.html" class="text-gray-300 hover:text-white">Academics</a></li>
+                    <li><a href="admissions.html" class="text-gray-300 hover:text-white">Admissions</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                <address class="not-italic text-gray-300 space-y-2">
+                    <p class="flex items-start">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i> 
+                        <span>123 Education Avenue<br>Greenfield, CA 90210</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> info@greenfield.edu
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i> Mon-Fri: 8AM - 5PM
+                    </p>
+                </address>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Subscribe to our newsletter for updates and announcements.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-800">
+                    <button type="submit" class="bg-primary-600 text-white px-4 py-2 rounded-r hover:bg-primary-700 transition">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+            <p>&copy; 2023 Greenfield Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 bg-white/95 z-50 p-6">
+        <div class="flex justify-between items-center mb-8">
+            <a href="index.html" class="text-2xl font-bold text-primary-600">Greenfield Academy</a>
+            <button class="mobile-menu-close text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <ul class="space-y-6">
+            <li><a href="index.html" class="block text-xl text-gray-700 hover:text-primary-600">Home</a></li>
+            <li><a href="about.html" class="block text-xl text-gray-700 hover:text-primary-600">About</a></li>
+            <li><a href="academics.html" class="block text-xl text-gray-700 hover:text-primary-600">Academics</a></li>
+            <li><a href="faculty.html" class="block text-xl text-gray-700 hover:text-primary-600">Faculty</a></li>
+            <li><a href="admissions.html" class="block text-xl text-gray-700 hover:text-primary-600">Admissions</a></li>
+            <li><a href="contact.html" class="block text-xl text-gray-700 hover:text-primary-600">Contact</a></li>
+        </ul>
+        <div class="mt-8">
+            <a href="admissions.html" class="block w-full bg-primary-600 text-white text-center py-3 rounded-full hover:bg-primary-700 transition">Apply Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('hidden');
+        });
+
+        document.querySelector('.mobile-menu-close').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

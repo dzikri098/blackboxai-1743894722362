@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results & Achievements | Greenfield Academy</title>
+    <!-- Production-ready Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        secondary: {
+                            600: '#7c3aed',
+                            700: '#6d28d9'
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                        sm: '4px',
+                        md: '8px',
+                        lg: '12px',
+                        xl: '20px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏫</text></svg>">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation with Glassmorphism -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary-600 flex items-center">
+                    <i class="fas fa-school mr-2"></i> Greenfield Academy
+                </a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-primary-600 font-medium">Home</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-primary-600 font-medium">About</a></li>
+                    <li><a href="academics.html" class="text-gray-700 hover:text-primary-600 font-medium">Academics</a></li>
+                    <li><a href="faculty.html" class="text-gray-700 hover:text-primary-600 font-medium">Faculty</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-primary-600 font-medium">Contact</a></li>
+                </ul>
+                <a href="admissions.html" class="bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-700 transition font-medium">Apply Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="relative h-96">
+        <img src="https://images.pexels.com/photos/4145359/pexels-photo-4145359.jpeg" 
+             alt="Graduating students throwing caps" 
+             class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center px-6">
+            <div class="max-w-4xl backdrop-blur-sm bg-white/10 p-10 rounded-2xl border border-white/20">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Results & Achievements</h1>
+                <p class="text-xl text-white/90">Celebrating excellence in academics, arts, and athletics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Banner -->
+    <section class="bg-primary-600 text-white py-4 sticky top-0 z-40 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div>
+                    <p class="text-2xl font-bold">100%</p>
+                    <p class="text-sm">College Acceptance</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold">4.2</p>
+                    <p class="text-sm">Average GPA</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold">1450</p>
+                    <p class="text-sm">Average SAT Score</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold">32</p>
+                    <p class="text-sm">AP Scholars</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Results -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Academic Excellence</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our students consistently achieve outstanding academic results</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Test Scores -->
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Standardized Test Scores</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">SAT Scores (2023)</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <div>
+                                        <p class="text-sm text-gray-500">Average</p>
+                                        <p class="text-xl font-bold text-primary-600">1450</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Top 25%</p>
+                                        <p class="text-xl font-bold text-primary-600">1520</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Top 10%</p>
+                                        <p class="text-xl font-bold text-primary-600">1580</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">ACT Scores (2023)</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <div>
+                                        <p class="text-sm text-gray-500">Average</p>
+                                        <p class="text-xl font-bold text-primary-600">32</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Top 25%</p>
+                                        <p class="text-xl font-bold text-primary-600">34</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Top 10%</p>
+                                        <p class="text-xl font-bold text-primary-600">36</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">AP Exam Results</h4>
+                            <div class="bg-white p-4 rounded-lg shadow-sm">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-sm text-gray-500">Exams Taken</p>
+                                        <p class="text-lg font-bold text-primary-600">286</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Score 3+</p>
+                                        <p class="text-lg font-bold text-primary-600">92%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- College Acceptances -->
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">College Acceptances</h3>
+                    <p class="text-gray-600 mb-6">Our graduates attend top colleges and universities across the country and around the world.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <img src="https://logo.clearbit.com/harvard.edu" alt="Harvard University" class="h-8 mr-3">
+                            <span class="font-medium">Harvard</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <img src="https://logo.clearbit.com/stanford.edu" alt="Stanford University" class="h-8 mr-3">
+                            <span class="font-medium">Stanford</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <img src="https://logo.clearbit.com/mit.edu" alt="MIT" class="h-8 mr-3">
+                            <span class="font-medium">MIT</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <img src="https://logo.clearbit.com/yale.edu" alt="Yale University" class="h-8 mr-3">
+                            <span class="font-medium">Yale</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <img src="https://logo.clearbit.com/princeton.edu" alt="Princeton University" class="h-8 mr-3">
+                            <span class="font-medium">Princeton</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <img src="https://logo.clearbit.com/columbia.edu" alt="Columbia University" class="h-8 mr-3">
+                            <span class="font-medium">Columbia</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+                            <i class="fas fa-list mr-2"></i> View complete college list
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Achievements -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Student Achievements</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Recognizing excellence beyond the classroom</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Academic Awards -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-graduation-cap text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Academic Awards</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy text-yellow-500 mt-1 mr-2"></i>
+                            <span>5 National Merit Finalists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy text-yellow-500 mt-1 mr-2"></i>
+                            <span>12 AP Scholars with Distinction</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy text-yellow-500 mt-1 mr-2"></i>
+                            <span>3 Intel Science Fair Finalists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy text-yellow-500 mt-1 mr-2"></i>
+                            <span>1 Rhodes Scholar</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Arts & Humanities -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-palette text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Arts & Humanities</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-award text-blue-500 mt-1 mr-2"></i>
+                            <span>2 Scholastic Art Gold Keys</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-award text-blue-500 mt-1 mr-2"></i>
+                            <span>1 National Poetry Slam Champion</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-award text-blue-500 mt-1 mr-2"></i>
+                            <span>3 All-State Musicians</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-award text-blue-500 mt-1 mr-2"></i>
+                            <span>Published student authors</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Athletics -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-running text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Athletics</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-medal text-orange-500 mt-1 mr-2"></i>
+                            <span>State Champions: Soccer</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-medal text-orange-500 mt-1 mr-2"></i>
+                            <span>Regional Champions: Basketball</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-medal text-orange-500 mt-1 mr-2"></i>
+                            <span>12 All-State Athletes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-medal text-orange-500 mt-1 mr-2"></i>
+                            <span>3 Division I Commitments</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Success -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-4">Alumni Success</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Where our graduates are making an impact</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Alumni 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3760390/pexels-photo-3760390.jpeg" 
+                             alt="Sarah Chen" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Sarah Chen</h3>
+                        <p class="text-primary-600 font-medium mb-2">Class of 2015 | Software Engineer at Google</p>
+                        <p class="text-gray-600 mb-4">"Greenfield's computer science program gave me the foundation to thrive in tech."</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            <span>Stanford University, Computer Science</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alumni 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3760391/pexels-photo-3760391.jpeg" 
+                             alt="Michael Rodriguez" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Michael Rodriguez</h3>
+                        <p class="text-primary-600 font-medium mb-2">Class of 2012 | Physician at Mayo Clinic</p>
+                        <p class="text-gray-600 mb-4">"The research opportunities at Greenfield sparked my passion for medicine."</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            <span>Harvard Medical School</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alumni 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3760392/pexels-photo-3760392.jpeg" 
+                             alt="Jessica Park" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Jessica Park</h3>
+                        <p class="text-primary-600 font-medium mb-2">Class of 2018 | Environmental Lawyer</p>
+                        <p class="text-gray-600 mb-4">"Greenfield's debate team prepared me for a career in environmental law."</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            <span>Yale Law School</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-primary-600 hover:bg-primary-700">
+                    Connect With Alumni <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Annual Report -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="md:flex">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <h2 class="text-2xl font-extrabold text-gray-900 mb-2">Annual Report</h2>
+                        <p class="text-gray-600 mb-4">Download our comprehensive report on student outcomes and school performance.</p>
+                        <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700">
+                            <i class="fas fa-download mr-2"></i> Download Report
+                        </a>
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-600">98%</p>
+                                <p class="text-sm text-gray-600">Graduation Rate</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-600">87%</p>
+                                <p class="text-sm text-gray-600">Students in Extracurriculars</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-600">$12M</p>
+                                <p class="text-sm text-gray-600">College Scholarships Awarded</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-600">45%</p>
+                                <p class="text-sm text-gray-600">Students in Advanced Courses</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-600">22</p>
+                                <p class="text-sm text-gray-600">Varsity Sports Teams</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary-600">60+</p>
+                                <p class="text-sm text-gray-600">Student Clubs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-primary-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold mb-6">Be Part of Our Success Story</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Applications for the 2023-2024 academic year are now open.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="admissions.html" class="bg-white text-primary-600 px-8 py-3 rounded-full hover:bg-gray-100 transition font-medium shadow-lg">Apply Now</a>
+                <a href="contact.html" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white/10 transition font-medium shadow-lg">Schedule a Tour</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4 flex items-center">
+                    <i class="fas fa-school mr-2"></i> Greenfield Academy
+                </h3>
+                <p class="text-gray-300">Preparing students for success in a changing world.</p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                    <li><a href="academics.html" class="text-gray-300 hover:text-white">Academics</a></li>
+                    <li><a href="faculty.html" class="text-gray-300 hover:text-white">Faculty</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                <address class="not-italic text-gray-300 space-y-2">
+                    <p class="flex items-start">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i> 
+                        <span>123 Education Avenue<br>Greenfield, CA 90210</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> (555) 123-4567
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> info@greenfield.edu
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i> Mon-Fri: 8AM - 5PM
+                    </p>
+                </address>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                <p class="text-gray-300 mb-4">Subscribe to our newsletter for updates and announcements.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-800">
+                    <button type="submit" class="bg-primary-600 text-white px-4 py-2 rounded-r hover:bg-primary-700 transition">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+            <p>&copy; 2023 Greenfield Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 bg-white/95 z-50 p-6">
+        <div class="flex justify-between items-center mb-8">
+            <a href="index.html" class="text-2xl font-bold text-primary-600">Greenfield Academy</a>
+            <button class="mobile-menu-close text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <ul class="space-y-6">
+            <li><a href="index.html" class="block text-xl text-gray-700 hover:text-primary-600">Home</a></li>
+            <li><a href="about.html" class="block text-xl text-gray-700 hover:text-primary-600">About</a></li>
+            <li><a href="academics.html" class="block text-xl text-gray-700 hover:text-primary-600">Academics</a></li>
+            <li><a href="faculty.html" class="block text-xl text-gray-700 hover:text-primary-600">Faculty</a></li>
+            <li><a href="contact.html" class="block text-xl text-gray-700 hover:text-primary-600">Contact</a></li>
+        </ul>
+        <div class="mt-8">
+            <a href="admissions.html" class="block w-full bg-primary-600 text-white text-center py-3 rounded-full hover:bg-primary-700 transition">Apply Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('hidden');
+        });
+
+        document.querySelector('.mobile-menu-close').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
